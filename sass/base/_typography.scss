@@ -1,0 +1,15 @@
+.title {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: $color-h2;
+  margin-bottom: 1.6rem;
+  &_animals {
+    margin-bottom: -1.6rem;
+  }
+  &_stories {
+    display: inline-block;
+    margin-right: 1.6rem;
+  }
+}

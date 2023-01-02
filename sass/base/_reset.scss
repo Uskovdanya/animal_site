@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+ul {
+  margin-bottom: 0;
+}
+
+a {
+  /*color: inherit;*/
+  cursor: pointer;
+  text-decoration: none;
+  &:visited {
+    text-decoration: none;
+    /*color: inherit;*/
+  }
+  &:hover {
+    text-decoration: none;
+    /*color: inherit;*/
+  }
+  &:focus {
+    text-decoration: none;
+    /*color: inherit;*/
+  }
+  &:active {
+    text-decoration: none;
+    /*color: inherit;*/
+  }
+}

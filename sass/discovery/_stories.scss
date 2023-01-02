@@ -1,0 +1,146 @@
+.stories {
+  grid-column: center-start / full-end;
+  padding-bottom: 4rem;
+  max-width: 100%;
+
+  &__viewall {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.1px;
+    color: $color-h2;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  &__btn-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    vertical-align: middle;
+    fill: $color-menu-hover;
+  }
+
+  &__swiper {
+    max-width: 138.5rem;
+    height: auto;
+    padding-left: 2.2rem;
+    margin-left: -2.2rem;
+  }
+  &__swiper-slide {
+    max-width: 27rem;
+    height: 48rem;
+    position: relative;
+    /*@media only screen and (max-width: $bp-largest) {
+      height: 47.4rem;
+    }*/
+    /*@media only screen and (max-width: $bp-large) {
+      height: 48.4rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      height: 38.4rem;
+    }*/
+  }
+  &__swiper-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2.4rem;
+    object-fit: cover;
+  }
+  &__swiper-view {
+    position: absolute;
+    left: 2.4rem;
+    bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  &__swiper-view:hover &__swiper-eye {
+    fill: $color-h2;
+  }
+  &__swiper-view:hover &__swiper-number {
+    color: $color-h2;
+  }
+  &__swiper-eye {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: $color-icons-swiper;
+    transition: all 0.2s;
+  }
+  &__swiper-number {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.4px;
+    color: $color-h3;
+    transition: all 0.2s;
+  }
+  &__swiper-likes {
+    position: absolute;
+    right: 2.4rem;
+    bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+  }
+  &__swiper-likes:hover &__swiper-heart {
+    fill: $color-h2;
+  }
+  &__swiper-likes:hover &__swiper-like {
+    color: $color-h2;
+  }
+  &__swiper-heart {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: $color-icons-swiper;
+    transition: all 0.2s;
+  }
+  &__swiper-like {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.4px;
+    color: $color-h3;
+    transition: all 0.2s;
+  }
+  &__buttons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    background: rgba(103, 80, 164, 0.2);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 500px;
+    top: 50%;
+    z-index: 1000;
+    transform: translateY(-50%);
+    &:hover {
+      background: rgba(103, 80, 164, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    cursor: pointer;
+    &_prev {
+      left: 0rem;
+    }
+
+    &_next {
+      right: 3.4rem;
+      @media only screen and (max-width: $bp-1450) {
+        right: 0;
+      }
+    }
+  }
+
+  &__swiper-button {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: $color-menu-hover;
+    z-index: 1000;
+  }
+}

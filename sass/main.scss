@@ -1,0 +1,25 @@
+// Libs
+@import "libs/font";
+
+// Global  Variables Mixins Reset
+
+@import "base/reset";
+@import "base/variables";
+@import "base/mixins";
+@import "base/global";
+@import "base/typography";
+
+//  Blocks
+@import "blocks/header";
+@import "blocks/menu";
+
+// Discovery
+@import "discovery/stories";
+@import "discovery/news";
+@import "discovery/animals";
+@import "discovery/discovery";
+
+// Map
+@import "map/map";
+
+// Media

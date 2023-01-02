@@ -1,0 +1,156 @@
+.map {
+  padding-bottom: 2.4rem;
+  min-height: 78rem;
+  grid-column: full-start / full-end;
+  justify-content: center;
+  display: grid;
+  grid-template-columns:
+    [search-start] minmax(min-content, 31rem) [search-end map-start] minmax(
+      min-content,
+      101.8rem
+    )
+    [map-end];
+
+  &__search {
+    grid-column: search-start / search-end;
+    padding: 12px;
+    background-color: $color-surface;
+    border-radius: 1.6rem 0 0 1.6rem;
+    min-height: 68.4rem;
+  }
+  &__map {
+    grid-column: map-start / map-end;
+    background-image: url(../img/section_map/back.jpg);
+    border-radius: 0 1.6rem 1.6rem 0;
+    min-height: 68.4rem;
+    background-size: cover;
+    position: relative;
+  }
+
+  &__search-form {
+    width: 100%;
+  }
+
+  &__search-icon {
+  }
+  &__search-input {
+  }
+  &__animals {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: minmax(min-content, 18.6rem);
+    /*grid-template-rows: minmax(min-content, 4.6rem);*/
+    row-gap: 3.3rem;
+  }
+  &__card {
+    display: grid;
+    grid-template-columns: minmax(min-content, 4.6rem) 1fr;
+    column-gap: 1.2rem;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__card:hover &__animals-desc {
+    color: $color-menu-hover;
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.6rem;
+  }
+  &__animals-desc {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.1px;
+    color: $color-h3;
+  }
+
+  &__search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.6rem;
+    position: absolute;
+    width: 13.4rem;
+    height: 4rem;
+    background-color: $color-text-btn;
+    box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+      0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 0.8rem;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.1px;
+    color: $color-btn;
+    left: calc(50% - 6.7rem);
+
+    top: 1.6rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: lighten($color-text-btn, 5%);
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($color-text-btn, 0.2); /* x y blur */
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($color-text-btn, 0.2);
+    }
+  }
+  &__map-icon {
+    fill: $color-menu-hover;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.8rem;
+  }
+
+  &__darkmode {
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+
+    width: 9.6rem;
+    height: 3.6rem;
+    background: linear-gradient(
+        0deg,
+        rgba(208, 188, 255, 0.14),
+        rgba(208, 188, 255, 0.14)
+      ),
+      $color-surface;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  &__darkmode-night {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: $color-h3;
+    margin-left: 1.6rem;
+  }
+  &__darkmode-day {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: $color-h3;
+  }
+  &__darkmode_active {
+    width: 4.8rem;
+    height: 3.6rem;
+    background: $darkmode-button;
+    border-radius: 500px;
+  }
+  &__explore {
+  }
+  &__zoom {
+  }
+  &__zoom-minus {
+  }
+  &__zoom-plus {
+  }
+}

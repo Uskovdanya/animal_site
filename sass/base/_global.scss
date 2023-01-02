@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
+  background-color: $color-surface;
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 48%;
+  }
+}
+body {
+  font-family: $font-primary;
+}
+.wrapper {
+  background-color: lighten($color-surface, 11%);
+  display: grid;
+  grid-template-columns: minmax(min-content, 144rem);
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-rows: minmax(min-content, 8rem) minmax(min-content, 8.8rem) 1fr;
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      6,
+      [col-all-start] minmax(min-content, 16.46rem) [col-all-end]
+    )
+    [gap-start]
+    minmax(min-content, 6rem) [gap-end] repeat(
+      2,
+      [col-animals-start] minmax(min-content, 14rem) [col-animals-end]
+    )
+    [center-end]
+    1fr[full-end];
+}

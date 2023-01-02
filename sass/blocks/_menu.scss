@@ -1,0 +1,130 @@
+.menu {
+  padding-bottom: 0.4rem;
+  grid-column: full-start / full-end;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns:
+    [Everyone-start] minmax(min-content, 15rem)
+    [Everyone-end gap1-start] minmax(min-content, 33.6rem)
+    [gap1-end menu-start] minmax(min-content, 37.2rem)
+    [menu-end] minmax(min-content, 47.1rem) [all-end];
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-rows: 2fr;
+    justify-content: center;
+    justify-items: center;
+  }
+  &__button {
+    grid-column: Everyone-start / Everyone-end;
+    padding: 0.6rem 0.8rem 0.6rem 1.2rem;
+
+    width: 15rem;
+    height: 4rem;
+    border: 1px solid $color-border-btn2;
+    border-radius: 0.8rem;
+    position: relative;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: $color-text-btn2;
+    transition: all 0.2s;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    @media only screen and (max-width: $bp-smallest) {
+      grid-row: 1/2;
+      grid-column: Everyone-start / all-end;
+    }
+  }
+  &__dropdown {
+    background-color: inherit;
+    color: $color-text-btn2;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background-color: lighten($color-search, 5%);
+    border: 1px solid $color-border-btn2;
+    padding: 0.6rem 0.6rem 0.6rem 1.2rem;
+    position: absolute;
+    width: 11.8rem;
+    left: 0;
+    top: 4rem;
+    gap: 0.6rem;
+    border-radius: 0.8rem;
+    transition: all 0.2s;
+    z-index: 2000;
+    a {
+      color: $color-text-btn2;
+      font-size: inherit;
+      font-weight: inherit;
+      &:hover {
+        color: $color-menu-hover;
+      }
+    }
+  }
+  &__button-arrow-down {
+    border: none;
+    background-color: inherit;
+    margin-left: 0.7rem;
+    transition: all 0.2s;
+  }
+  &__button-arrow-down:hover &__btn-icon {
+    fill: $color-btn;
+  }
+
+  &__btn-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: $color-text-btn2;
+  }
+  &__nav {
+    grid-column: menu-start / menu-end;
+    @media only screen and (max-width: $bp-smallest) {
+      grid-row: 2/3;
+      grid-column: Everyone-start / all-end;
+    }
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__discovery {
+  }
+  &__link:link,
+  &__link:visited {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    letter-spacing: 0.1px;
+    color: $color-text-btn2;
+    width: 9.5rem;
+    height: 4rem;
+    padding: 1rem 1.6rem;
+    border-radius: 0.8rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-menu-hover;
+      background: linear-gradient(
+          0deg,
+          rgba(208, 188, 255, 0.12),
+          rgba(208, 188, 255, 0.12)
+        ),
+        $color-surface;
+    }
+  }
+  &__btn {
+    &__icon {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

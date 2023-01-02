@@ -1,0 +1,43 @@
+.news {
+  grid-column: center-start / col-news-end 6;
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start / col-news-end 6;
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-column: full-start / full-end;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 48.2rem));
+    grid-auto-rows: minmax(min-content, 40.28rem);
+    column-gap: 2.4rem;
+    row-gap: 4rem;
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 48.2rem));
+      grid-auto-rows: minmax(min-content, 40.28rem);
+      justify-content: center;
+    }
+  }
+
+  &__element {
+    display: grid;
+
+    grid-template-rows: minmax(min-content, 29.84rem);
+    row-gap: 2.4rem;
+    align-content: start;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; // с object fit обязательно ставить высоту и ширину
+    display: block;
+    border-radius: 1.6rem;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: $color-h3;
+  }
+}

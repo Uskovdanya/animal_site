@@ -1,0 +1,37 @@
+// COLOR VARIABLES
+
+/*:root {
+  --color-surface: #1c1b1f;
+  --color-h2: #d0bcff;
+  --color-h3: #ffffff;
+}*/
+$color-surface: #1c1b1f;
+$color-h2: #d0bcff;
+$color-h3: #ffffff;
+$color-search: #49454f;
+$color-btn: #d0bcff;
+$color-text-btn: #381e72;
+$color-text-btn2: #cac4d0;
+$color-border-btn2: #313033;
+$color-menu-hover: #d0bcff;
+$color-icons-swiper: #f6edff;
+$darkmode-button: #4f378b;
+
+/*$color-primary: #c69963;
+$color-primary-dark: #b28451;
+
+$color-secondary: #101d2c;*/
+
+// FONT VARIABLES
+
+$font-secondary: "Be Vietnam Pro", sans-serif;
+$font-primary: "Roboto", sans-serif;
+
+//RESPONSIVE BREAKPOINTS
+$bp-1450: 90.6em; // 1450/16
+$bp-largest: 75em; //1200/16
+$bp-large: 62em; //1000/16
+$bp-medium: 50em; // 800/16
+$bp-medium700: 43.75em; // 700/16
+$bp-small: 37.5em; // 600/16
+$bp-smallest: 25em; // 400/16

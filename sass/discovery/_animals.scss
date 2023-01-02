@@ -1,0 +1,64 @@
+.animals {
+  grid-column: col-animals-start / center-end;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3.2rem;
+  align-content: start;
+
+  /*@media only screen and (max-width: $bp-small) {
+    grid-column: full-start / col-news-end 6;
+  }*/
+  @media only screen and (max-width: $bp-small) {
+    grid-column: full-start / full-end;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(min-content, 14rem) minmax(
+        min-content,
+        12.8rem
+      );
+    row-gap: 3.2rem;
+    column-gap: 1.2rem;
+    grid-template-rows: 13.6rem;
+    @media only screen and (max-width: $bp-medium700) {
+      grid-template-columns: minmax(min-content, 14rem);
+      justify-self: center;
+    }
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: minmax(min-content, 14rem) minmax(
+          min-content,
+          12.8rem
+        );
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover; // с object fit обязательно ставить высоту и ширину
+    display: block;
+    border-radius: 1.6rem;
+  }
+  &__describtion {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.2rem;
+    align-content: start;
+  }
+  &__name {
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    color: #ffffff;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.5px;
+    color: $color-h3;
+    opacity: 0.64;
+    span {
+      padding-top: 0.4rem;
+    }
+  }
+}
